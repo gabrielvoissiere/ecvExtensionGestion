@@ -1,0 +1,204 @@
+$primary-color: #8956EF;
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+#logo {
+    width: 25%;
+    align-self: start;
+    margin: 10px;
+}
+
+#pc-box {
+    display: flex;
+}
+
+fieldset {
+    border-color: $primary-color;
+    
+    legend {
+        color: $primary-color;
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .adminText {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        background-color: rgba(255, 0, 0, 0.527);
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .bdeText {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        background-color: rgba(0, 255, 55, 0.527);
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .input {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1vh;
+        width: 100%;
+
+        label {
+            font-weight: 500;
+        }
+
+        input {
+            border: 2px solid $primary-color;
+            border-radius: 5px;
+            padding: 5px 0px;
+        }
+    }
+
+    .sendBtn {
+        margin-top: 3vh;
+        background-color: $primary-color;
+        border: none;
+        color: white;
+        border: 2px solid $primary-color;
+        border-radius: 5px;
+        height: 4vh;
+        width: 10vh;
+    }
+}
+
+footer {
+    background-color: $primary-color;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    p {
+        font-weight: 600;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #logo {
+        width: 70%;
+        margin-top: 10px;
+    }
+
+    #pc-box {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    fieldset {
+        border-color: $primary-color;
+        
+        legend {
+            color: $primary-color;
+            font-size: 1.75rem;
+            text-align: center;
+        }
+    
+        h3 {
+            font-size: 1.5rem;
+        }
+    
+        .adminText {
+            margin-top: 5px;
+            margin-bottom: 0px;
+            background-color: rgba(255, 0, 0, 0.527);
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+    
+        .bdeText {
+            margin-top: 5px;
+            margin-bottom: 0px;
+            background-color: rgba(0, 255, 55, 0.527);
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+    
+        .input {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1vh;
+            width: 100%;
+    
+            label {
+                font-weight: 500;
+            }
+    
+            input {
+                border: 2px solid $primary-color;
+                border-radius: 5px;
+                padding: 5px 0px;
+            }
+        }
+    
+        .sendBtn {
+            margin-top: 3vh;
+            background-color: $primary-color;
+            border: none;
+            color: white;
+            border: 2px solid $primary-color;
+            border-radius: 5px;
+            height: 4vh;
+            width: 10vh;
+        }
+    }
+    
+    footer {
+        background-color: $primary-color;
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        p {
+            font-weight: 600;
+            color: white;
+        }
+    }
+}

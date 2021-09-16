@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontend/scss/style.css">
+    <title>Gestion extension ECV</title>
+</head>
+
+<body>
+    <img id="logo" src="frontend/images/logo.png" alt="">
+<div id="pc-box">
+    <fieldset>
+        <legend>Administration</legend>
+        <h3>Informations actuellement posté :</h3>
+
+        <div id="adminInfos"></div>
+        <div class="input">
+            <label for="info-1">Information n°1</label>
+            <input type="text" name="info-1" placeholder="Information administration" id="admin-info-1">
+        </div>
+        <div class="input">
+            <label for="info-2">Information n°2</label>
+            <input type="text" name="info-2" placeholder="Information administration" id="admin-info-2">
+        </div>
+
+        <input class="sendBtn" type="submit" value="Modifier" onclick="modifyAdminInfo()">
+        <!-- !do not delete <input type="submit" value="enregistrer" onclick="sendAdminInfos()"> -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Bureau Des Etudiants</legend>
+        <h3>Evenements actuellement posté :</h3>
+
+        <div id="bdeInfos"></div>
+        <div class="input">
+            <label for="info-1">Information n°1</label>
+            <input type="text" name="info-1" placeholder="Information BDE"
+                id="bde-info-1">
+        </div>
+        <div class="input">
+            <label for="info-2">Information n°2</label>
+            <input type="text" name="info-2" placeholder="Information BDE"
+                id="bde-info-2">
+        </div>
+
+        <input class="sendBtn" type="submit" value="Modifier" onclick="modifyBdeInfo()">
+        <!-- !do not delete <input type="submit" value="enregistrer" onclick="sendBdeInfos()"> -->
+    </fieldset>
+</div>
+    <footer>
+        <p>v1.0 - ECV Creative school & Community</p>
+    </footer>
+    <script src="frontend/js/script.js"></script>
+</body>
+
+</html>
