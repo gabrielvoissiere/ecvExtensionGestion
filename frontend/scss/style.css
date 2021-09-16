@@ -26,6 +26,40 @@ body {
           justify-content: space-between;
 }
 
+#login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#login fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#login footer {
+  position: absolute;
+  bottom: 0;
+}
+
 h1,
 h2,
 h3,
@@ -36,12 +70,28 @@ p {
   margin: 0px;
 }
 
-#logo {
-  width: 25%;
+header {
   -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
       align-self: start;
   margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+}
+
+header #logo {
+  width: 15vw;
+}
+
+header h1 {
+  margin-left: 15px;
 }
 
 #pc-box {
@@ -52,16 +102,17 @@ p {
 
 fieldset {
   border-color: #8956EF;
+  margin: 0px 3vh;
 }
 
 fieldset legend {
   color: #8956EF;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 
 fieldset h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 fieldset .adminText {
@@ -70,7 +121,7 @@ fieldset .adminText {
   background-color: rgba(255, 0, 0, 0.527);
   border-radius: 5px;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 fieldset .bdeText {
@@ -79,7 +130,7 @@ fieldset .bdeText {
   background-color: rgba(0, 255, 55, 0.527);
   border-radius: 5px;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 fieldset .input {
@@ -96,12 +147,14 @@ fieldset .input {
 
 fieldset .input label {
   font-weight: 500;
+  font-size: 1.5rem;
 }
 
 fieldset .input input {
   border: 2px solid #8956EF;
   border-radius: 5px;
   padding: 5px 0px;
+  font-size: 1.25rem;
 }
 
 fieldset .sendBtn {
@@ -113,6 +166,7 @@ fieldset .sendBtn {
   border-radius: 5px;
   height: 4vh;
   width: 10vh;
+  font-size: 1.25rem;
 }
 
 footer {
@@ -144,10 +198,32 @@ footer p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    height: auto;
   }
-  #logo {
-    width: 70%;
-    margin-top: 10px;
+  header {
+    -ms-flex-item-align: start;
+        align-self: start;
+    margin: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: auto;
+  }
+  header #logo {
+    width: 75%;
+  }
+  header h1 {
+    display: none;
   }
   #pc-box {
     display: -webkit-box;
@@ -227,6 +303,7 @@ footer p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 10px;
   }
   footer p {
     font-weight: 600;

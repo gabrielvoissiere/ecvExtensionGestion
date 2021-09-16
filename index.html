@@ -6,54 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="frontend/scss/style.css">
+    <link rel="icon" type="image/png" href="frontend/images/128.png" />
     <title>Gestion extension ECV</title>
 </head>
 
-<body>
-    <img id="logo" src="frontend/images/logo.png" alt="">
-<div id="pc-box">
-    <fieldset>
-        <legend>Administration</legend>
-        <h3>Informations actuellement posté :</h3>
+<body id="login">
+    <div id="pc-box">
+        <fieldset>
+            <legend>Connection</legend>
 
-        <div id="adminInfos"></div>
-        <div class="input">
-            <label for="info-1">Information n°1</label>
-            <input type="text" name="info-1" placeholder="Information administration" id="admin-info-1">
-        </div>
-        <div class="input">
-            <label for="info-2">Information n°2</label>
-            <input type="text" name="info-2" placeholder="Information administration" id="admin-info-2">
-        </div>
+            <div class="input">
+                <label for="info-2">Pseudo</label>
+                <input type="text" autocomplete="email" placeholder="mon super pseudo" id="pseudo">
+            </div>
 
-        <input class="sendBtn" type="submit" value="Modifier" onclick="modifyAdminInfo()">
-        <!-- !do not delete <input type="submit" value="enregistrer" onclick="sendAdminInfos()"> -->
-    </fieldset>
+            <div class="input">
+                <label for="info-2">Mot de passe</label>
+                <input type="password" placeholder="********" id="password">
+            </div>
 
-    <fieldset>
-        <legend>Bureau Des Etudiants</legend>
-        <h3>Evenements actuellement posté :</h3>
+            <input class="sendBtn" type="submit" value="Let's go !" onclick="login()">
+        </fieldset>
 
-        <div id="bdeInfos"></div>
-        <div class="input">
-            <label for="info-1">Information n°1</label>
-            <input type="text" name="info-1" placeholder="Information BDE"
-                id="bde-info-1">
-        </div>
-        <div class="input">
-            <label for="info-2">Information n°2</label>
-            <input type="text" name="info-2" placeholder="Information BDE"
-                id="bde-info-2">
-        </div>
-
-        <input class="sendBtn" type="submit" value="Modifier" onclick="modifyBdeInfo()">
-        <!-- !do not delete <input type="submit" value="enregistrer" onclick="sendBdeInfos()"> -->
-    </fieldset>
-</div>
+        <img src="frontend/images/128.png" alt="">
+    </div>
     <footer>
-        <p>v1.0 - ECV Creative school & Community</p>
+        <p>v1.0 - ECV Creative school & Community - Aix en Provence</p>
     </footer>
-    <script src="frontend/js/script.js"></script>
+    <script src="frontend/js/login.js"></script>
 </body>
 
 </html>
