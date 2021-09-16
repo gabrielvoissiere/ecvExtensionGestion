@@ -36,6 +36,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        border-radius: 5px;
     }
 
     footer {
@@ -83,6 +84,8 @@ fieldset {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 5px;
+    width: 25vw;
 
     legend {
         color: $primary-color;
@@ -136,18 +139,13 @@ fieldset {
             padding: 5px 0px;
             font-size: 1.25rem;
         }
-    }
 
-    .sendBtn {
-        margin-top: 3vh;
-        background-color: $primary-color;
-        border: none;
-        color: white;
-        border: 2px solid $primary-color;
-        border-radius: 5px;
-        height: 4vh;
-        width: 10vh;
-        font-size: 1.25rem;
+        .error {
+            margin: 5px 0px;
+            text-align: justify;
+            color: red;
+            width: 100%;
+        }
     }
 
     .disabled {
@@ -155,6 +153,18 @@ fieldset {
         background-color: gray;
         border: 2px solid gray;
     }
+}
+
+.sendBtn {
+    margin-top: 3vh;
+    background-color: $primary-color;
+    border: none;
+    color: white;
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+    height: 4vh;
+    width: auto;
+    font-size: 1.25rem;
 }
 
 footer {
@@ -171,7 +181,56 @@ footer {
     }
 }
 
-@media screen and (max-width: 375px) {
+#addUserNotif {
+    width: 20vw;
+    height: 6vh;
+    position: fixed;
+    top: 6vh;
+    background-color: rgba(255, 0, 0, 0.527);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms ease-in-out;
+    transform: translateY(-210%);
+    border-radius: 5px;
+    font-size: 1.25rem;
+}
+
+#bdeEventNotif {
+    width: 20vw;
+    height: 6vh;
+    position: fixed;
+    top: 6vh;
+    background-color: rgba(0, 255, 55, 0.856);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms ease-in-out;
+    transform: translateY(-210%);
+    border-radius: 5px;
+    font-size: 1.25rem;
+}
+
+#adminEventNotif {
+    width: 20vw;
+    height: 6vh;
+    position: fixed;
+    top: 6vh;
+    background-color: rgba(255, 0, 0, 0.527);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms ease-in-out;
+    transform: translateY(-210%);
+    border-radius: 5px;
+    font-size: 1.25rem;
+}
+
+.showNotif {
+    transform: translateY(0) !important;
+}
+
+@media screen and (max-width: 415px) {
     body {
         flex-direction: column;
         justify-content: space-between;
@@ -204,6 +263,7 @@ footer {
     fieldset {
         border-color: $primary-color;
         margin-top: 20px;
+        width: auto;
 
         legend {
             color: $primary-color;
@@ -248,17 +308,12 @@ footer {
                 border-radius: 5px;
                 padding: 5px 0px;
             }
-        }
 
-        .sendBtn {
-            margin-top: 3vh;
-            background-color: $primary-color;
-            border: none;
-            color: white;
-            border: 2px solid $primary-color;
-            border-radius: 5px;
-            height: 5vh;
-            width: 15vh;
+            .error {
+                margin: 5px 0px;
+                text-align: justify;
+                color: red;
+            }
         }
 
         .disabled {
@@ -266,6 +321,17 @@ footer {
             background-color: gray;
             border: 2px solid gray;
         }
+    }
+
+    .sendBtn {
+        margin-top: 3vh;
+        background-color: $primary-color;
+        border: none;
+        color: white;
+        border: 2px solid $primary-color;
+        border-radius: 5px;
+        height: 5vh;
+        width: auto;
     }
 
     footer {
@@ -283,5 +349,54 @@ footer {
             font-size: 0.75rem;
 
         }
+    }
+
+    #addUserNotif {
+        width: 90vw;
+        height: 6vh;
+        position: fixed;
+        top: 2vh;
+        background-color: rgba(255, 0, 0, 0.856);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 400ms ease-in-out;
+        transform: translateY(-155%);
+        border-radius: 5px;
+        font-size: 1.25rem;
+    }
+
+    #bdeEventNotif {
+        width: 90vw;
+        height: 6vh;
+        position: fixed;
+        top: 2vh;
+        background-color: rgba(0, 255, 55, 0.856);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 400ms ease-in-out;
+        transform: translateY(-155%);
+        border-radius: 5px;
+        font-size: 1.25rem;
+    }
+
+    #adminEventNotif {
+        width: 90vw;
+        height: 6vh;
+        position: fixed;
+        top: 2vh;
+        background-color: rgba(255, 0, 0, 0.856);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 400ms ease-in-out;
+        transform: translateY(-155%);
+        border-radius: 5px;
+        font-size: 1.25rem;
+    }
+
+    .showNotif {
+        transform: translateY(0) !important;
     }
 }

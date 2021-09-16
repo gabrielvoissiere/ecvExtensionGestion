@@ -60,6 +60,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 5px;
 }
 
 #login footer {
@@ -120,6 +121,8 @@ fieldset {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 5px;
+  width: 25vw;
 }
 
 fieldset legend {
@@ -181,16 +184,11 @@ fieldset .input select {
   font-size: 1.25rem;
 }
 
-fieldset .sendBtn {
-  margin-top: 3vh;
-  background-color: #8956EF;
-  border: none;
-  color: white;
-  border: 2px solid #8956EF;
-  border-radius: 5px;
-  height: 4vh;
-  width: 10vh;
-  font-size: 1.25rem;
+fieldset .input .error {
+  margin: 5px 0px;
+  text-align: justify;
+  color: red;
+  width: 100%;
 }
 
 fieldset .disabled {
@@ -198,6 +196,18 @@ fieldset .disabled {
           filter: blur(2px);
   background-color: gray;
   border: 2px solid gray;
+}
+
+.sendBtn {
+  margin-top: 3vh;
+  background-color: #8956EF;
+  border: none;
+  color: white;
+  border: 2px solid #8956EF;
+  border-radius: 5px;
+  height: 4vh;
+  width: auto;
+  font-size: 1.25rem;
 }
 
 footer {
@@ -220,7 +230,81 @@ footer p {
   color: white;
 }
 
-@media screen and (max-width: 375px) {
+#addUserNotif {
+  width: 20vw;
+  height: 6vh;
+  position: fixed;
+  top: 6vh;
+  background-color: rgba(255, 0, 0, 0.527);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  -webkit-transform: translateY(-210%);
+          transform: translateY(-210%);
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
+#bdeEventNotif {
+  width: 20vw;
+  height: 6vh;
+  position: fixed;
+  top: 6vh;
+  background-color: rgba(0, 255, 55, 0.856);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  -webkit-transform: translateY(-210%);
+          transform: translateY(-210%);
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
+#adminEventNotif {
+  width: 20vw;
+  height: 6vh;
+  position: fixed;
+  top: 6vh;
+  background-color: rgba(255, 0, 0, 0.527);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  -webkit-transform: translateY(-210%);
+          transform: translateY(-210%);
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
+.showNotif {
+  -webkit-transform: translateY(0) !important;
+          transform: translateY(0) !important;
+}
+
+@media screen and (max-width: 415px) {
   body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -268,6 +352,7 @@ footer p {
   fieldset {
     border-color: #8956EF;
     margin-top: 20px;
+    width: auto;
   }
   fieldset legend {
     color: #8956EF;
@@ -312,7 +397,18 @@ footer p {
     border-radius: 5px;
     padding: 5px 0px;
   }
-  fieldset .sendBtn {
+  fieldset .input .error {
+    margin: 5px 0px;
+    text-align: justify;
+    color: red;
+  }
+  fieldset .disabled {
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    background-color: gray;
+    border: 2px solid gray;
+  }
+  .sendBtn {
     margin-top: 3vh;
     background-color: #8956EF;
     border: none;
@@ -320,13 +416,7 @@ footer p {
     border: 2px solid #8956EF;
     border-radius: 5px;
     height: 5vh;
-    width: 15vh;
-  }
-  fieldset .disabled {
-    -webkit-filter: blur(2px);
-            filter: blur(2px);
-    background-color: gray;
-    border: 2px solid gray;
+    width: auto;
   }
   footer {
     background-color: #8956EF;
@@ -347,6 +437,76 @@ footer p {
     font-weight: 600;
     color: white;
     font-size: 0.75rem;
+  }
+  #addUserNotif {
+    width: 90vw;
+    height: 6vh;
+    position: fixed;
+    top: 2vh;
+    background-color: rgba(255, 0, 0, 0.856);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 400ms ease-in-out;
+    transition: 400ms ease-in-out;
+    -webkit-transform: translateY(-155%);
+            transform: translateY(-155%);
+    border-radius: 5px;
+    font-size: 1.25rem;
+  }
+  #bdeEventNotif {
+    width: 90vw;
+    height: 6vh;
+    position: fixed;
+    top: 2vh;
+    background-color: rgba(0, 255, 55, 0.856);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 400ms ease-in-out;
+    transition: 400ms ease-in-out;
+    -webkit-transform: translateY(-155%);
+            transform: translateY(-155%);
+    border-radius: 5px;
+    font-size: 1.25rem;
+  }
+  #adminEventNotif {
+    width: 90vw;
+    height: 6vh;
+    position: fixed;
+    top: 2vh;
+    background-color: rgba(255, 0, 0, 0.856);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 400ms ease-in-out;
+    transition: 400ms ease-in-out;
+    -webkit-transform: translateY(-155%);
+            transform: translateY(-155%);
+    border-radius: 5px;
+    font-size: 1.25rem;
+  }
+  .showNotif {
+    -webkit-transform: translateY(0) !important;
+            transform: translateY(0) !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

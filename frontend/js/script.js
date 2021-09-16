@@ -57,9 +57,9 @@ fetch('http://localhost:3000/api/auth/id', {
         let level = data.level
 
         if (level == "bde") {
-            document.getElementById("adminSendBtn").setAttribute("disabled","")
+            document.getElementById("adminSendBtn").setAttribute("disabled", "")
             document.getElementById("adminSendBtn").classList.add("disabled")
-            document.getElementById("addBtn").setAttribute("disabled","")
+            document.getElementById("addBtn").setAttribute("disabled", "")
             document.getElementById("addBtn").classList.add("disabled")
         }
     })
@@ -93,7 +93,13 @@ const modifyAdminInfo = () => {
         })
         .then(response => response.json())
         .then(data => {
-            location.reload()
+            document.getElementById("adminEventNotif").classList.add("showNotif")
+            setTimeout(() => {
+                document.getElementById("adminEventNotif").classList.remove("showNotif")
+            }, 3000);
+            setTimeout(() => {
+                location.reload()
+            }, 3500);
         })
         .catch(err => console.log(err))
 }
@@ -126,7 +132,13 @@ const modifyBdeInfo = () => {
         })
         .then(response => response.json())
         .then(data => {
-            location.reload()
+            document.getElementById("bdeEventNotif").classList.add("showNotif")
+            setTimeout(() => {
+                document.getElementById("bdeEventNotif").classList.remove("showNotif")
+            }, 3000);
+            setTimeout(() => {
+                location.reload()
+            }, 3500);
         })
         .catch(err => console.log(err))
 }
@@ -181,4 +193,9 @@ const sendBdeInfos = () => {
         .catch(error => {
             console.error(error);
         })
+}
+
+const quitApp = () => {
+    sessionStorage.clear()
+    location = "../../index.html"
 }
