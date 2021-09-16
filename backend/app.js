@@ -29,7 +29,6 @@ app.use(helmet());
 app.use(express.json());
 
 // routes pour les images, sauces et utilisateur
-app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/api/auth', userRoutes);
 app.use('/api/info', infoRoutes);
 

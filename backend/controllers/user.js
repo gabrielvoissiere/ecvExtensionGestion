@@ -1,4 +1,4 @@
-const User = require('../models/User'); // importation du modèle
+const User = require('../models/user'); // importation du modèle
 const bcrypt = require('bcrypt'); // Package de cryptage pour le mot de passe
 const jwt = require('jsonwebtoken'); //Package de création et de vérification des token
 
@@ -20,11 +20,12 @@ exports.signup = (req, res, next) => { // enregistrement de l'utilisateur
       .then(hash => {
         const user = new User({ // Création d’un nouvel utilisateur avec mot de passe cryptée et email masquer
           email: maskEmail(req.body.email),
-          password: hash
+          password: hash,
+          level: req.body.level
         });
         user.save() //enregistrement de l'utilisateur dans la base de donné
           .then(() => res.status(201).json({ message: 'User created !' }))
-          .catch(error => res.status(400).json({ error }));
+          // .catch(error => res.status(400).json({ error }));
       })
       .catch(error => res.status(500).json({ error }));
   } else {
@@ -58,6 +59,12 @@ exports.login = (req, res, next) => { // connexion de l’utilisateur
     .catch(error => res.status(500).json({ error }));
 };
 
+// get user id
+exports.getUserId = (req, res, next) => {
+  User.findOne({ email: req.body.email })
+  .then(user => res.status(200).json(user))
+}
+
 function maskEmail(email) {
   const splited = email.split('@');
   const leftMail = replaceWithStars(splited[0]);
@@ -76,3 +83,4 @@ function replaceWithStars(str) {
   }
   return newStr;
 }
+

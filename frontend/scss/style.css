@@ -103,6 +103,16 @@ header h1 {
 fieldset {
   border-color: #8956EF;
   margin: 0px 3vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 fieldset legend {
@@ -157,6 +167,13 @@ fieldset .input input {
   font-size: 1.25rem;
 }
 
+fieldset .input select {
+  border: 2px solid #8956EF;
+  border-radius: 5px;
+  padding: 5px 0px;
+  font-size: 1.25rem;
+}
+
 fieldset .sendBtn {
   margin-top: 3vh;
   background-color: #8956EF;
@@ -167,6 +184,13 @@ fieldset .sendBtn {
   height: 4vh;
   width: 10vh;
   font-size: 1.25rem;
+}
+
+fieldset .disabled {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  background-color: gray;
+  border: 2px solid gray;
 }
 
 footer {
@@ -236,6 +260,7 @@ footer p {
   }
   fieldset {
     border-color: #8956EF;
+    margin-top: 20px;
   }
   fieldset legend {
     color: #8956EF;
@@ -287,8 +312,14 @@ footer p {
     color: white;
     border: 2px solid #8956EF;
     border-radius: 5px;
-    height: 4vh;
-    width: 10vh;
+    height: 5vh;
+    width: 15vh;
+  }
+  fieldset .disabled {
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    background-color: gray;
+    border: 2px solid gray;
   }
   footer {
     background-color: #8956EF;
@@ -308,6 +339,7 @@ footer p {
   footer p {
     font-weight: 600;
     color: white;
+    font-size: 0.75rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

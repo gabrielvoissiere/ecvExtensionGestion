@@ -73,6 +73,9 @@ header {
 fieldset {
     border-color: $primary-color;
     margin: 0px 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     legend {
         color: $primary-color;
@@ -119,6 +122,13 @@ fieldset {
             padding: 5px 0px;
             font-size: 1.25rem;
         }
+
+        select {
+            border: 2px solid $primary-color;
+            border-radius: 5px;
+            padding: 5px 0px;
+            font-size: 1.25rem;
+        }
     }
 
     .sendBtn {
@@ -131,6 +141,12 @@ fieldset {
         height: 4vh;
         width: 10vh;
         font-size: 1.25rem;
+    }
+
+    .disabled {
+        filter: blur(2px);
+        background-color: gray;
+        border: 2px solid gray;
     }
 }
 
@@ -180,6 +196,7 @@ footer {
 
     fieldset {
         border-color: $primary-color;
+        margin-top: 20px;
 
         legend {
             color: $primary-color;
@@ -233,8 +250,14 @@ footer {
             color: white;
             border: 2px solid $primary-color;
             border-radius: 5px;
-            height: 4vh;
-            width: 10vh;
+            height: 5vh;
+            width: 15vh;
+        }
+
+        .disabled {
+            filter: blur(2px);
+            background-color: gray;
+            border: 2px solid gray;
         }
     }
 
@@ -250,6 +273,8 @@ footer {
         p {
             font-weight: 600;
             color: white;
+            font-size: 0.75rem;
+
         }
     }
 }

@@ -31,7 +31,7 @@
                 <input type="text" name="info-2" placeholder="Information administration" id="admin-info-2">
             </div>
 
-            <input class="sendBtn" type="submit" value="Modifier" onclick="modifyAdminInfo()">
+            <input id="adminSendBtn" class="sendBtn" type="submit" value="Modifier" onclick="modifyAdminInfo()">
             <!-- !do not delete <input type="submit" value="enregistrer" onclick="sendAdminInfos()"> -->
         </fieldset>
 
@@ -49,14 +49,39 @@
                 <input type="text" name="info-2" placeholder="Information BDE" id="bde-info-2">
             </div>
 
-            <input class="sendBtn" type="submit" value="Modifier" onclick="modifyBdeInfo()">
+            <input id="bdeSendBtn" class="sendBtn" type="submit" value="Modifier" onclick="modifyBdeInfo()">
             <!-- !do not delete <input type="submit" value="enregistrer" onclick="sendBdeInfos()"> -->
+        </fieldset>
+
+        <fieldset>
+            <legend>Ajouter des membres</legend>
+
+            <div class="input">
+                <label for="info-2">Pseudo</label>
+                <input type="text" autocomplete="email" placeholder="mon super pseudo" id="email">
+            </div>
+
+            <div class="input">
+                <label for="info-2">Mot de passe</label>
+                <input type="password" placeholder="********" id="password">
+            </div>
+
+            <div class="input">
+                <label for="info-2">Admin/BDE</label>
+                <select name="info-2" id="level">
+                    <option value="admin">Administration</option>
+                    <option value="bde">BDE</option>
+                </select>
+            </div>
+
+            <input id="addBtn" class="sendBtn" type="submit" value="Ajouter" onclick="signup()">
         </fieldset>
     </div>
     <footer>
         <p>v1.0 - ECV Creative school & Community - Aix en Provence</p>
     </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/user.js"></script>
 </body>
 
 </html>

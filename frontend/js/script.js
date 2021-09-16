@@ -41,6 +41,30 @@ fetch("http://localhost:3000/api/info").then(response => {
     console.log(error);
 })
 
+let userMail = {
+    email: sessionStorage.getItem("email")
+}
+fetch('http://localhost:3000/api/auth/id', {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+            'Authorization': 'Bearer ' + sessionStorage.getItem("token")
+        },
+        body: JSON.stringify(userMail)
+    })
+    .then(response => response.json())
+    .then(data => {
+        let level = data.level
+
+        if (level == "bde") {
+            document.getElementById("adminSendBtn").setAttribute("disabled","")
+            document.getElementById("adminSendBtn").classList.add("disabled")
+            document.getElementById("addBtn").setAttribute("disabled","")
+            document.getElementById("addBtn").classList.add("disabled")
+        }
+    })
+    .catch(err => console.log(err))
+
 const modifyAdminInfo = () => {
     let adminInfos = document.getElementById("adminInfos")
     let id = adminInfos.getAttribute("class")
@@ -62,7 +86,8 @@ const modifyAdminInfo = () => {
     fetch('http://localhost:3000/api/info/' + id, {
             method: 'PUT',
             headers: {
-                'Content-type': 'application/json; charset=UTF-8' // Indicates the content 
+                'Content-type': 'application/json; charset=UTF-8',
+                'Authorization': 'Bearer ' + sessionStorage.getItem("token")
             },
             body: JSON.stringify(infoAdmin)
         })
@@ -94,7 +119,8 @@ const modifyBdeInfo = () => {
     fetch('http://localhost:3000/api/info/' + id, {
             method: 'PUT',
             headers: {
-                'Content-type': 'application/json; charset=UTF-8' // Indicates the content 
+                'Content-type': 'application/json; charset=UTF-8',
+                'Authorization': 'Bearer ' + sessionStorage.getItem("token")
             },
             body: JSON.stringify(infoBde)
         })
@@ -106,7 +132,7 @@ const modifyBdeInfo = () => {
 }
 
 //! in case of probleme with the bdd (like info deleted) you can repost info with this code
-//! uncomment the code in the "index.html" file
+//! uncomment the code in the "home.html" file
 const postUrl = "http://localhost:3000/api/info"
 
 const sendAdminInfos = () => {
@@ -120,6 +146,7 @@ const sendAdminInfos = () => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + sessionStorage.getItem("token")
             },
             body: JSON.stringify(infoAdmin),
         })
@@ -143,6 +170,7 @@ const sendBdeInfos = () => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + sessionStorage.getItem("token")
             },
             body: JSON.stringify(infoBde),
         })
