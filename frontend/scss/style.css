@@ -102,6 +102,62 @@ header h1 {
   margin-left: 15px;
 }
 
+@-webkit-keyframes error {
+  0% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+  }
+  25% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
+  }
+  50% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+  }
+  75% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
+  }
+  100% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+  }
+}
+
+@keyframes error {
+  0% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+  }
+  25% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
+  }
+  50% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+  }
+  75% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
+  }
+  100% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+  }
+}
+
+.error {
+  border-color: red;
+  -webkit-animation: error 200ms alternate ease-in-out;
+          animation: error 200ms alternate ease-in-out;
+}
+
+.error-title {
+  color: red;
+}
+
 #pc-box {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -72,6 +72,33 @@ header {
     }
 }
 
+@keyframes error {
+    0%{
+        transform: translateX(-2%);
+    }
+    25%{
+        transform: translateX(2%);
+    }
+    50%{
+        transform: translateX(-2%);
+    }
+    75%{
+        transform: translateX(2%);
+    }
+    100%{
+        transform: translateX(-2%);
+    }
+}
+
+.error {
+    border-color: red;
+    animation: error 200ms alternate ease-in-out;
+}
+
+.error-title {
+    color: red;
+}
+
 #pc-box {
     display: flex;
 }

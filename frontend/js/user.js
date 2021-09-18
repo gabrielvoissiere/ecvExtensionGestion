@@ -9,7 +9,7 @@ const signup = () => {
       password: document.getElementById("password").value,
       level: document.getElementById("level").value
     }
-  
+
     fetch('http://localhost:3000/api/auth/signup', {
         method: 'POST',
         headers: {
@@ -22,13 +22,13 @@ const signup = () => {
       .then(data => {
         document.getElementById("email").value = ""
         document.getElementById("password").value = ""
-  
+
         document.getElementById("addUserNotif").classList.add("showNotif")
         setTimeout(() => {
           document.getElementById("addUserNotif").classList.remove("showNotif")
         }, 3000);
       })
-      .catch(err => console.log(err)) 
+      .catch(err => console.log(err))
   }
 }
 
@@ -66,12 +66,23 @@ const login = () => {
         }
         return newStr;
       }
+      console.log(data.error);
 
-      console.log('user connected !');
-      sessionStorage.setItem("token", data.token);
-      sessionStorage.setItem("userId", data.userId);
-      sessionStorage.setItem("email", maskEmail(document.getElementById("email").value))
-      location = "frontend/pages/home.html"
+      if (data.error == undefined) {
+        console.log('user connected !');
+        sessionStorage.setItem("token", data.token);
+        sessionStorage.setItem("userId", data.userId);
+        sessionStorage.setItem("email", maskEmail(document.getElementById("email").value))
+        location = "frontend/pages/home.html"
+      } else {
+        console.error("user error");
+        document.getElementById("login-menu").classList.add("error")
+        document.getElementById("login-title").classList.add("error-title")
+        setTimeout(() => {
+          document.getElementById("login-menu").classList.remove("error")
+          document.getElementById("login-title").classList.remove("error-title")
+        }, 1000);
+      }
     })
     .catch(err => console.log(err))
 }

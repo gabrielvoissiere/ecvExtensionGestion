@@ -1,4 +1,10 @@
-fetch("http://localhost:3000/api/info").then(response => {
+const config = {
+    headers: {
+      Authorization: 'Bearer ' + sessionStorage.getItem("token")
+    }
+  }
+
+fetch("http://localhost:3000/api/info", config).then(response => {
     if (response.ok) {
         return response.json()
     } else {
