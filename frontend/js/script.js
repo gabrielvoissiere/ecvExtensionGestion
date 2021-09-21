@@ -61,7 +61,7 @@ fetch('http://localhost:3000/api/auth/id', {
     .then(response => {
         if (response.ok == false) {
             document.getElementById("pc-box").style.display = "none"
-            document.getElementById("quitBtn").innerHTML = "il semblerai que vous soyez arriver ici par inadvertance... <br> ou pas... Cliquez ici pour vous connecter"
+            document.getElementById("quitBtn").innerHTML = "il semblerai que vous soyez arrivé ici par inadvertance... <br> ou pas... Cliquez ici pour vous connecter"
             document.getElementById("quitBtn").style.height = "auto"
             document.getElementById("quitBtn").style.padding = "8px"
         } else {
