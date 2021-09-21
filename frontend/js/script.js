@@ -65,8 +65,7 @@ fetch('http://localhost:3000/api/auth/id', {
         if (level == "bde") {
             document.getElementById("adminSendBtn").setAttribute("disabled", "")
             document.getElementById("adminSendBtn").classList.add("disabled")
-            document.getElementById("addBtn").setAttribute("disabled", "")
-            document.getElementById("addBtn").classList.add("disabled")
+            document.getElementById("addMember").style.display = "none"
         }
     })
     .catch(err => console.log(err))
