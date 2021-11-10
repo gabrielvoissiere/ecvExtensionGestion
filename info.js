@@ -1,6 +1,7 @@
 const express = require('express');
+const fs = require('fs');
 
-const Info = require('../models/Info');
+const Info = require('../models/info');
 
 // récupere toutes les sauces
 exports.getAllInfo = (req, res, next) => {

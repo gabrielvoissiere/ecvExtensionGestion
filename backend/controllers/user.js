@@ -1,4 +1,4 @@
-const User = require('../models/user'); // importation du modèle
+const User = require('../models/User'); // importation du modèle
 const bcrypt = require('bcrypt'); // Package de cryptage pour le mot de passe
 const jwt = require('jsonwebtoken'); //Package de création et de vérification des token
 

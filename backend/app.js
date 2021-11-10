@@ -14,6 +14,11 @@ const path = require('path'); // chemin pCour les images
 
 const app = express() // création de l'app express
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
+
 // connexion de maniere sécuriser a mongoose via le fichier .env
 mongoose.connect(process.env.MONGODB_LINK, {
         useNewUrlParser: true,
